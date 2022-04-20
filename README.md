@@ -2,10 +2,10 @@
 
 Dependências:
 
-	  -JDK 14
-	  -postgresql
-	  -postman
-	  -maven
+	  -JDK 14;
+	  -postgresql;
+	  -postman;
+	  -maven.
 
 ---------------------------------------------------
 
@@ -68,6 +68,7 @@ Podemos agora testar também:
 	- o PUT por id: http://localhost:8080/parking-spot/id 
 
 Além disso, temos também a paginação (dentro do get de todos os elementos):
+
 	- pode-se testar ela inserindo um 'key' page dentro do postman com o valor 0 para retornar a primeira página, valor 1 para a segunda página e vice-versa.
 	- pode-se testar também definindo um 'key' size para limitar o número de elementos por página.
 	- e por fim, pode-se fazer também ordernar por data de registro, sendo um 'key' do tipo 'sort' com os valores de 'registrationDate,ASC' ou 'registrationDate,DESC' 
