@@ -2,11 +2,11 @@
 
 Dependências:
 
-  -JDK 14
-  -postgresql
-  -postman
-  -maven
-  
+	  -JDK 14
+	  -postgresql
+	  -postman
+	  -maven
+
 ---------------------------------------------------
 
 Descrição da aplicação:
@@ -35,27 +35,27 @@ Levantando a API
 
 Postgree:
 
-- Conectamos nossa api com o banco inserindo o user e senha do postgre dentro de application.properties:
-    -spring.datasource.username=postgres
-    -spring.datasource.password=123456
-- Criamos um banco dentro do pgadmin do postgree chamado "parking-control-db".
-- Depois de levantar a aplicação verificamos se a tabela "tb_parking_spot" foi criada.
+	- Conectamos nossa api com o banco inserindo o user e senha do postgre dentro de application.properties:
+	    -spring.datasource.username=postgres
+	    -spring.datasource.password=123456
+	- Criamos um banco dentro do pgadmin do postgree chamado "parking-control-db".
+	- Depois de levantar a aplicação verificamos se a tabela "tb_parking_spot" foi criada.
 
 
 Postman:
 - Adicionamos cada método (POST,GET,DELETE,UPDATE).
 - Dentro do postman, utilizando o métododo POST com a URI http://localhost:8080/parking-spot, vamos em body, raw e adicionamos os campos que vão ser salvos:
 
-	{
-    		"parkingSpotNumber": "205B",
-		"licensePlateCar": "RRS8562",
-    		"brandCar": "audi",
-    		"modelCar": "q5",
-    		"colorCar": "black",
-    		"responsibleName": "Carlos Daniel",
-    		"apartment": "220",
-    		"block": "D"
-	}
+		{
+			"parkingSpotNumber": "205B",
+			"licensePlateCar": "RRS8562",
+			"brandCar": "audi",
+			"modelCar": "q5",
+			"colorCar": "black",
+			"responsibleName": "Carlos Daniel",
+			"apartment": "220",
+			"block": "D"
+		}
 
 - Após enviar os dados deverá ser retornado um "201 Created" com todos os dados mais o Id e o registrationDate inclusos.
 - Tabém poderá ser feito as verificações caso ocorra repetições dos campos de placa, número de vaga, apartamento ou bloco. Retornando uma mensagem de conflito.
